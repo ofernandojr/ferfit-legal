@@ -61,18 +61,23 @@
 <ul>
   <li>Os avisos falados usam o mecanismo de voz do aparelho. O app não usa o microfone.</li>
 </ul>
+<h3>Assinatura Ferfit Pro (opcional)</h3>
+<ul>
+  <li>A assinatura é vendida e cobrada pela Google Play. O Ferfit não recebe nem guarda dados de pagamento (cartão, endereço de cobrança).</li>
+  <li>O app consulta a Google Play para saber se a assinatura está ativa e guarda na sua conta Ferfit apenas se você é assinante, o plano escolhido e a data da última verificação.</li>
+</ul>
 
 <h2>2. Onde os dados ficam</h2>
 <ul>
   <li><strong>No aparelho</strong>: tudo fica no celular e no relógio. As fotos de evolução ficam na área privada do app, fora da galeria.</li>
   <li><strong>Entre o celular e o relógio</strong>: sincronização direta entre os seus aparelhos pelo Google Play Services (Wear OS), criptografada.</li>
-  <li><strong>Conta Ferfit (Firebase / Cloud Firestore)</strong>: o cadastro e os dados do app (programas, exercícios, treinos, medidas, metas e configurações), em servidores do Google em São Paulo. As fotos de evolução não vão para o Firebase.</li>
+  <li><strong>Conta Ferfit (Firebase / Cloud Firestore)</strong>: o cadastro, a situação da assinatura e os dados do app (programas, exercícios, treinos, medidas, metas e configurações), em servidores do Google em São Paulo. As fotos de evolução não vão para o Firebase.</li>
   <li><strong>Seu Google Drive</strong>: uma cópia de segurança dos dados e as fotos de evolução, na pasta “Ferfit” do <strong>seu</strong> Drive. O app usa a permissão restrita <em>drive.file</em> e só enxerga os arquivos que ele mesmo criou.</li>
   <li><strong>Backup do Android</strong>: se o backup do aparelho estiver ligado na sua conta Google, o próprio Android pode incluir os dados do app nele.</li>
 </ul>
 
 <h2>3. Compartilhamento</h2>
-<p>O Ferfit não vende nem compartilha seus dados. O Google (Firebase e Drive) guarda os dados para a sua conta. Os outros envios acontecem quando você pede: a gravação no Health Connect e as imagens que você escolher compartilhar (cartões para story).</p>
+<p>O Ferfit não vende nem compartilha seus dados. O Google (Firebase e Drive) guarda os dados para a sua conta, e a Google Play processa a compra da assinatura, sob a política de privacidade do Google. Os outros envios acontecem quando você pede: a gravação no Health Connect e as imagens que você escolher compartilhar (cartões para story).</p>
 
 <h2>4. Base legal e consentimento</h2>
 <p>Ao entrar, você aceita esta política e consente com o tratamento dos seus dados, inclusive de saúde, para as finalidades descritas (Lei Geral de Proteção de Dados, art. 7º e art. 11). Você pode retirar o consentimento a qualquer momento excluindo a conta.</p>
@@ -81,6 +86,7 @@
 <ul>
   <li>Apague treinos, medidas e fotos no app a qualquer momento; a exclusão vale também para o relógio e para a sua conta.</li>
   <li><strong>Excluir a conta</strong>: em Configurações › Conta › Excluir conta, a conta e todos os dados guardados nela no Firebase são apagados na hora. Também dá para pedir pelo email abaixo, como explicado em <a href="https://ofernandojr.github.io/ferfit-legal/excluir-conta.html">ofernandojr.github.io/ferfit-legal/excluir-conta.html</a>.</li>
+  <li>Excluir a conta ou desinstalar o app <strong>não cancela a assinatura</strong>: cancele na Google Play, em Pagamentos e assinaturas › Assinaturas.</li>
   <li>Desinstalar o app apaga os dados guardados no aparelho. O backup pode ser apagado no Google Drive (pasta “Ferfit”), e o acesso do app à sua conta pode ser revogado em <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
   <li>As permissões do Health Connect, da localização, dos sensores e das notificações podem ser retiradas nas configurações do Android ou do Health Connect.</li>
 </ul>
@@ -112,19 +118,20 @@
   <li><strong>Watch sensors</strong>: heart rate, steps, calories and altitude during workouts. <strong>Location (GPS)</strong> only while an outdoor activity is in progress, never in the background outside a workout.</li>
   <li><strong>Health Connect</strong> (with your permission): reads sleep, heart rate, heart rate variability, resting heart rate, weight and body composition only to show readiness, body composition and goals; they are not stored (except the starting weight of a weight goal you create). Writes the workouts done in Ferfit. Never sold, shared with third parties or <strong>used for advertising</strong>.</li>
   <li><strong>Music on the watch</strong> (optional): with notification access, only the playing media's information (title, artist and the playing app with its icon). <strong>Voice cues</strong> use the device's text-to-speech; no microphone.</li>
+  <li><strong>Ferfit Pro subscription</strong> (optional): sold and billed by Google Play; Ferfit never receives payment data. The app asks Google Play whether the subscription is active and keeps in your Ferfit account only whether you subscribe, the chosen plan and when it was last checked.</li>
 </ul>
 
 <h2>2. Where the data is kept</h2>
-<p>On your devices (photos in the app's private storage); synced directly between phone and watch (encrypted); in your <strong>Ferfit account in Cloud Firestore</strong> (account record and app data, not photos), on Google servers in São Paulo; and, as a backup with the progress photos, in the “Ferfit” folder of <strong>your</strong> Google Drive (restricted <em>drive.file</em> scope). Android device backup may also include the app's data.</p>
+<p>On your devices (photos in the app's private storage); synced directly between phone and watch (encrypted); in your <strong>Ferfit account in Cloud Firestore</strong> (account record, subscription status and app data, not photos), on Google servers in São Paulo; and, as a backup with the progress photos, in the “Ferfit” folder of <strong>your</strong> Google Drive (restricted <em>drive.file</em> scope). Android device backup may also include the app's data.</p>
 
 <h2>3. Sharing</h2>
-<p>No data is sold or shared. Google (Firebase and Drive) stores the data for your account. Other transfers only happen when you ask: writing to Health Connect and images you choose to share.</p>
+<p>No data is sold or shared. Google (Firebase and Drive) stores the data for your account, and Google Play processes the subscription purchase under Google's privacy policy. Other transfers only happen when you ask: writing to Health Connect and images you choose to share.</p>
 
 <h2>4. Consent</h2>
 <p>By signing in you accept this policy and consent to the processing of your data, including health data, for these purposes (Brazilian LGPD, art. 7 and 11). You can withdraw it at any time by deleting your account.</p>
 
 <h2>5. Your controls and deletion</h2>
-<p>Delete workouts, measurements and photos in the app at any time. Delete your account in Settings › Account › Delete account: the account and all data kept in it in Firebase are removed at once; or request it by email as described at <a href="https://ofernandojr.github.io/ferfit-legal/excluir-conta.html">ofernandojr.github.io/ferfit-legal/excluir-conta.html</a>. Uninstalling deletes the data on the device; delete the Drive backup in the “Ferfit” folder and revoke access at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</p>
+<p>Delete workouts, measurements and photos in the app at any time. Delete your account in Settings › Account › Delete account: the account and all data kept in it in Firebase are removed at once; or request it by email as described at <a href="https://ofernandojr.github.io/ferfit-legal/excluir-conta.html">ofernandojr.github.io/ferfit-legal/excluir-conta.html</a>. Deleting the account or uninstalling <strong>does not cancel the subscription</strong>: cancel it in Google Play › Payments &amp; subscriptions. Uninstalling deletes the data on the device; delete the Drive backup in the “Ferfit” folder and revoke access at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</p>
 
 <h2>6. Security, health and children</h2>
 <p>Connections are encrypted and the database rules let each account read and write only its own data. Ferfit is not a medical device. The app is not directed to children under 13.</p>
