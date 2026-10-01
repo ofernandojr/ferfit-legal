@@ -73,7 +73,7 @@
   <li><strong>Entre o celular e o relógio</strong>: sincronização direta entre os seus aparelhos pelo Google Play Services (Wear OS), criptografada.</li>
   <li><strong>Conta Ferfit (Firebase / Cloud Firestore)</strong>: o cadastro, a situação da assinatura e os dados do app (programas, exercícios, treinos, medidas, metas e configurações), em servidores do Google em São Paulo. As fotos de evolução não vão para o Firebase.</li>
   <li><strong>Seu Google Drive</strong>: uma cópia de segurança dos dados e as fotos de evolução, na pasta “Ferfit” do <strong>seu</strong> Drive. O app usa a permissão restrita <em>drive.file</em> e só enxerga os arquivos que ele mesmo criou.</li>
-  <li><strong>Backup do Android</strong>: se o backup do aparelho estiver ligado na sua conta Google, o próprio Android pode incluir os dados do app nele.</li>
+  <li><strong>Ao sair da conta</strong>: os dados saem do celular e do relógio e continuam na sua conta Ferfit e no seu Drive. Quem entrar depois no mesmo aparelho só vê os próprios dados. O app não usa o backup automático do Android.</li>
 </ul>
 
 <h2>3. Compartilhamento</h2>
@@ -122,7 +122,7 @@
 </ul>
 
 <h2>2. Where the data is kept</h2>
-<p>On your devices (photos in the app's private storage); synced directly between phone and watch (encrypted); in your <strong>Ferfit account in Cloud Firestore</strong> (account record, subscription status and app data, not photos), on Google servers in São Paulo; and, as a backup with the progress photos, in the “Ferfit” folder of <strong>your</strong> Google Drive (restricted <em>drive.file</em> scope). Android device backup may also include the app's data.</p>
+<p>On your devices (photos in the app's private storage); synced directly between phone and watch (encrypted); in your <strong>Ferfit account in Cloud Firestore</strong> (account record, subscription status and app data, not photos), on Google servers in São Paulo; and, as a backup with the progress photos, in the “Ferfit” folder of <strong>your</strong> Google Drive (restricted <em>drive.file</em> scope). Signing out takes the data off the phone and the watch (it stays in your account and Drive), so whoever signs in next on the same device only sees their own data; the app does not use Android's automatic backup.</p>
 
 <h2>3. Sharing</h2>
 <p>No data is sold or shared. Google (Firebase and Drive) stores the data for your account, and Google Play processes the subscription purchase under Google's privacy policy. Other transfers only happen when you ask: writing to Health Connect and images you choose to share.</p>
