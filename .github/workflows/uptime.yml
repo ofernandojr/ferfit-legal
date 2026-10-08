@@ -1,0 +1,53 @@
+# Checks the Ferfit API every 5 minutes from outside Hostinger. While it is down, status.json (read by the app when it
+# cannot reach the server) carries a message, and the job fails so GitHub e-mails the owner (right away, then hourly).
+name: Uptime
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: uptime
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check the Ferfit API
+        id: check
+        run: |
+          ok=false
+          for i in 1 2 3; do
+            body=$(curl -fsS -m 20 https://ferfit.com.br/api/v1/health || true)
+            if echo "$body" | grep -q '"ok":true' && echo "$body" | grep -q '"db":true'; then ok=true; break; fi
+            echo "attempt $i: ${body:-no answer}"
+            sleep 20
+          done
+          echo "ok=$ok" >> "$GITHUB_OUTPUT"
+
+      - name: Update status.json
+        id: status
+        run: echo "result=$(python3 .github/uptime.py '${{ steps.check.outputs.ok }}')" >> "$GITHUB_OUTPUT"
+
+      - name: Publish the change
+        run: |
+          if ! git diff --quiet status.json; then
+            git config user.name "ferfit-uptime"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -qam "status: server ${{ steps.check.outputs.ok == 'true' && 'up' || 'down' }}"
+            git push -q
+          fi
+
+      - name: Alert
+        if: steps.status.outputs.result == 'alert'
+        run: |
+          echo "::error::Ferfit API is down (https://ferfit.com.br/api/v1/health)"
+          exit 1
