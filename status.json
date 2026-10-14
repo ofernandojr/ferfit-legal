@@ -3,11 +3,7 @@
     "https://ferfit.com.br/api",
     "https://www.ferfit.com.br/api"
   ],
-  "message": {
-    "pt": "O servidor do Ferfit está fora do ar agora. Já estamos resolvendo; seus treinos continuam salvos no aparelho.",
-    "en": "The Ferfit server is down right now. We are on it; your workouts stay saved on your device.",
-    "es": "El servidor de Ferfit está caído ahora. Ya lo estamos resolviendo; tus entrenamientos siguen guardados en el dispositivo."
-  },
-  "down_since": "2026-10-14T14:42Z",
+  "message": null,
+  "down_since": null,
   "checked": "2026-10"
 }
